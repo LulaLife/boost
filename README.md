@@ -35,7 +35,14 @@ Next, install the MCP server and coding guidelines:
 php artisan boost:install
 ```
 
-Once Laravel Boost has been installed, you're ready to start coding with Cursor, Claude Code, or your AI agent of choice.
+Once Laravel Boost has been installed, you're ready to start coding with Cursor, Claude Code, Augment Code, or your AI agent of choice.
+
+**Note for Augment Code users:**
+- **VS Code**: Automatic MCP configuration via `.vscode/settings.json`
+- **JetBrains IDEs** (PhpStorm, IntelliJ IDEA, WebStorm, PyCharm): Manual configuration through Augment settings panel
+- **Vim/Neovim**: Manual configuration through Augment plugin settings
+
+Laravel Boost will detect your IDE and provide appropriate setup instructions during installation.
 
 ## Available MCP Tools
 

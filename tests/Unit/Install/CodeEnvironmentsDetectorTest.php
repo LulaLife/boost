@@ -40,6 +40,7 @@ test('discoverSystemInstalledCodeEnvironments returns detected programs', functi
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\VSCode::class, fn () => $program2);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\Cursor::class, fn () => $program3);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\ClaudeCode::class, fn () => $otherProgram);
+    $container->bind(\Laravel\Boost\Install\CodeEnvironment\AugmentCode::class, fn () => $otherProgram);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\Copilot::class, fn () => $otherProgram);
 
     $detector = new CodeEnvironmentsDetector($container);
@@ -64,6 +65,7 @@ test('discoverSystemInstalledCodeEnvironments returns empty array when no progra
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\VSCode::class, fn () => $otherProgram);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\Cursor::class, fn () => $otherProgram);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\ClaudeCode::class, fn () => $otherProgram);
+    $container->bind(\Laravel\Boost\Install\CodeEnvironment\AugmentCode::class, fn () => $otherProgram);
     $container->bind(\Laravel\Boost\Install\CodeEnvironment\Copilot::class, fn () => $otherProgram);
 
     $detector = new CodeEnvironmentsDetector($container);
